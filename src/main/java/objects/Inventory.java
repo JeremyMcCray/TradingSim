@@ -1,17 +1,17 @@
 package objects;
 
 public class Inventory {
-    int amountOfgems;
-    int amountOfgold;
-    int amountOfiron;
-    int amountOfwood;
-    int amountOfwheat;
+    int amountOfGems;
+    int amountOfGold;
+    int amountOfIron;
+    int amountOfWood;
+    int amountOfWheat;
 
     public Inventory(int gems, int iron, int wood, int wheat, int gold) {
-        this.amountOfgems = gems;
-        this.amountOfgold = gold;
-        this.amountOfiron = iron;
-        this.amountOfwood = wood;
-        this.amountOfwheat = wheat;
+        this.amountOfGems = gems;
+        this.amountOfGold = gold;
+        this.amountOfIron = iron;
+        this.amountOfWood = wood;
+        this.amountOfWheat = wheat;
     }
 }
