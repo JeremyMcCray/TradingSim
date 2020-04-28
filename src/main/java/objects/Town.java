@@ -7,11 +7,47 @@ public class Town {
     int yPos;
     WealthLevel wealthLevel;
 
+
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+
     public int getXPosition(){
         return this.xPos;
     }
+
+    public void setxPos(int xPos) {
+        this.xPos = xPos;
+    }
+
     public int getYPosition(){
         return this.yPos;
+    }
+
+    public void setyPos(int yPos) {
+        this.yPos = yPos;
+    }
+
+    public WealthLevel getWealthLevel() {
+        return wealthLevel;
+    }
+
+    public void setWealthLevel(WealthLevel wealthLevel) {
+        this.wealthLevel = wealthLevel;
     }
 
     public Town(String name, Inventory inventory, int xPos, int yPos, WealthLevel wealthLevel) {
