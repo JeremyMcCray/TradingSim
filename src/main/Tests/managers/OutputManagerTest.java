@@ -1,3 +1,5 @@
+package managers;
+
 import managers.OutputManager;
 import org.junit.Assert;
 import org.junit.Test;
