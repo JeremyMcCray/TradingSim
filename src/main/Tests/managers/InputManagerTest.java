@@ -23,7 +23,7 @@ public class InputManagerTest {
         InputManager inputManager = new InputManager();
 
         Boolean actualTrue = inputManager.checkInputIsAInteger(12);
-        Boolean actualFalse = inputManager.checkInputIsAInteger("this is true");
+        Boolean actualFalse = inputManager.checkInputIsAInteger("this is false");
 
         Assert.assertTrue(actualTrue);
         Assert.assertFalse(actualFalse);
@@ -34,7 +34,7 @@ public class InputManagerTest {
         InputManager inputManager = new InputManager();
 
         Boolean actualTrue = inputManager.checkInputIsADouble(12.);
-        Boolean actualFalse = inputManager.checkInputIsADouble("this is true");
+        Boolean actualFalse = inputManager.checkInputIsADouble("this is false");
 
         Assert.assertTrue(actualTrue);
         Assert.assertFalse(actualFalse);
