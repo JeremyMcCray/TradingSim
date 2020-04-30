@@ -5,11 +5,11 @@ import objects.abstracts.AbstractTrader;
 
 public class TravelingTrader extends AbstractTrader {
 
-    int travelSpeed;
-    int currentXLocation;
-    int currentYLocation;
-    Town startingLocation;
-    int moveDistanceRemaining = travelSpeed;
+    private int travelSpeed;
+    private int currentXLocation;
+    private int currentYLocation;
+    private Town startingLocation;
+    private int moveDistanceRemaining = travelSpeed;
 
     public TravelingTrader(String name, Inventory inventory, int speed, Town startingLocation) {
         super(name, inventory);

@@ -40,13 +40,28 @@ public class TravelingTraderTest {
     @Test
     public void moveOnXAxis() {
         trader.setMoveDistanceRemaining(20);
-        int actualPosition = trader.moveOnXAxis(11);
-
-
-        Assert.assertEquals(actualPosition, 11);
+        trader.moveOnXAxis(11);
+        int actualPosition = trader.getCurrentXLocation();
+        int expectedPosition = 11;
+        Assert.assertEquals(actualPosition, expectedPosition);
     }
 
     @Test
     public void moveOnYAxis() {
+        trader.setMoveDistanceRemaining(20);
+        trader.moveOnYAxis(11);
+        int actualPosition = trader.getCurrentYLocation();
+        int expectedPosition = 11;
+        Assert.assertEquals(actualPosition, expectedPosition);
+    }
+
+    @Test
+    public void moveOnYAxisFail(){
+        trader.setMoveDistanceRemaining(11);
+        trader.moveOnYAxis(12);
+        int actualPosition = trader.getCurrentYLocation();
+        int expectedPosition = 0;
+
+        Assert.assertEquals(actualPosition,expectedPosition);
     }
 }
