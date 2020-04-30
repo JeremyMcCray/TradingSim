@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class TravelingTraderTest {
 
     TravelingTrader trader;
@@ -64,4 +62,15 @@ public class TravelingTraderTest {
 
         Assert.assertEquals(actualPosition,expectedPosition);
     }
+
+    @Test
+    public void moveOnXAxisFail(){
+        trader.setMoveDistanceRemaining(11);
+        trader.moveOnXAxis(12);
+        int actualPosition = trader.getCurrentXLocation();
+        int expectedPosition = 0;
+
+        Assert.assertEquals(actualPosition,expectedPosition);
+    }
+
 }

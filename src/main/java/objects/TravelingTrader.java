@@ -9,7 +9,7 @@ public class TravelingTrader extends AbstractTrader {
     private int currentXLocation;
     private int currentYLocation;
     private Town startingLocation;
-    private int moveDistanceRemaining = travelSpeed;
+    private int moveDistanceRemaining;
 
     public TravelingTrader(String name, Inventory inventory, int speed, Town startingLocation) {
         super(name, inventory);
@@ -17,6 +17,7 @@ public class TravelingTrader extends AbstractTrader {
         this.startingLocation = startingLocation;
         this.currentXLocation= this.startingLocation.getXPosition();
         this.currentYLocation= this.startingLocation.getYPosition();
+        this.moveDistanceRemaining = travelSpeed;
     }
 
     public int getTravelSpeed() {
