@@ -19,6 +19,46 @@ public class TravelingTrader extends AbstractTrader {
         this.currentYLocation= this.startingLocation.getYPosition();
     }
 
+    public int getTravelSpeed() {
+        return travelSpeed;
+    }
+
+    public void setTravelSpeed(int travelSpeed) {
+        this.travelSpeed = travelSpeed;
+    }
+
+    public int getCurrentXLocation() {
+        return currentXLocation;
+    }
+
+    public void setCurrentXLocation(int currentXLocation) {
+        this.currentXLocation = currentXLocation;
+    }
+
+    public int getCurrentYLocation() {
+        return currentYLocation;
+    }
+
+    public void setCurrentYLocation(int currentYLocation) {
+        this.currentYLocation = currentYLocation;
+    }
+
+    public Town getStartingLocation() {
+        return startingLocation;
+    }
+
+    public void setStartingLocation(Town startingLocation) {
+        this.startingLocation = startingLocation;
+    }
+
+    public int getMoveDistanceRemaining() {
+        return moveDistanceRemaining;
+    }
+
+    public void setMoveDistanceRemaining(int moveDistanceRemaining) {
+        this.moveDistanceRemaining = moveDistanceRemaining;
+    }
+
     public boolean checkMoveDistanceRemaining(int distance){
         return distance < moveDistanceRemaining;
     }
