@@ -5,11 +5,11 @@ import objects.abstracts.AbstractTrader;
 
 public class TravelingTrader extends AbstractTrader {
 
-    int travelSpeed;
-    int currentXLocation;
-    int currentYLocation;
-    Town startingLocation;
-    int moveDistanceRemaining = travelSpeed;
+    private int travelSpeed;
+    private int currentXLocation;
+    private int currentYLocation;
+    private Town startingLocation;
+    private int moveDistanceRemaining;
 
     public TravelingTrader(String name, Inventory inventory, int speed, Town startingLocation) {
         super(name, inventory);
@@ -17,6 +17,47 @@ public class TravelingTrader extends AbstractTrader {
         this.startingLocation = startingLocation;
         this.currentXLocation= this.startingLocation.getXPosition();
         this.currentYLocation= this.startingLocation.getYPosition();
+        this.moveDistanceRemaining = travelSpeed;
+    }
+
+    public int getTravelSpeed() {
+        return travelSpeed;
+    }
+
+    public void setTravelSpeed(int travelSpeed) {
+        this.travelSpeed = travelSpeed;
+    }
+
+    public int getCurrentXLocation() {
+        return currentXLocation;
+    }
+
+    public void setCurrentXLocation(int currentXLocation) {
+        this.currentXLocation = currentXLocation;
+    }
+
+    public int getCurrentYLocation() {
+        return currentYLocation;
+    }
+
+    public void setCurrentYLocation(int currentYLocation) {
+        this.currentYLocation = currentYLocation;
+    }
+
+    public Town getStartingLocation() {
+        return startingLocation;
+    }
+
+    public void setStartingLocation(Town startingLocation) {
+        this.startingLocation = startingLocation;
+    }
+
+    public int getMoveDistanceRemaining() {
+        return moveDistanceRemaining;
+    }
+
+    public void setMoveDistanceRemaining(int moveDistanceRemaining) {
+        this.moveDistanceRemaining = moveDistanceRemaining;
     }
 
     public boolean checkMoveDistanceRemaining(int distance){
